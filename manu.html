@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu - CAFÉ | Coffee & More</title>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="manu.css">
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="container header-container">
+
+      <div class="site-logo">
+        <a href="home.html">
+          <span class="logo-title">CAFE</span>
+          <span class="logo-subtitle">COFFEE & MORE</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="manu.html" class="active">MENU</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+
+          <li id="myProfileNav" style="display: none;">
+            <a href="userdasbord.html">MY PROFILE</a>
+          </li>
+
+          <li id="adminDashboardNav" style="display: none;">
+            <a href="admine_dasbord.html">ADMIN DASHBOARD</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-action" id="authButtons">
+
+        <button class="btn btn-order" type="button" id="signInNavBtn">
+          Sign In
+        </button>
+
+        <button class="btn btn-order" type="button" id="logoutNavBtn" style="display:none;">
+          Logout
+        </button>
+
+        <button class="btn btn-order" type="button" id="onlineOrderBtn">
+          <span>🛒</span> ONLINE ORDER <span class="badge cart-badge bg-white text-dark ms-1" id="cartBadge" style="display:none; font-size: 0.72rem; padding: 2px 7px; border-radius: 12px;">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <section class="hero-savor">
+    <div class="container hero-savor-container">
+      <div class="hero-savor-content">
+        <h1 class="hero-savor-title">Savor the Perfect<br>Brew!</h1>
+        <p class="hero-savor-desc">
+          Freshly brewed coffee, handcrafted artisan treats, and a cozy space to slow down. 
+          Discover your daily cup of perfection made from ethically sourced single-origin beans.
+        </p>
+        <div class="hero-savor-buttons">
+          <a href="#special-picks" class="btn btn-pill-cream">EXPLORE MENU</a>
+          <a href="#full-menu" class="btn btn-pill-amber">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="quick-features-section">
+    <div class="container">
+      <div class="features-pill-grid">
+       
+        <div class="feature-pill-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h4>Premium Beans</h4>
+            <p>Sourced from top global farms</p>
+          </div>
+        </div>
+
+        
+        <div class="feature-pill-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h4>Freshly Brewed</h4>
+            <p>Rich aroma & flavor, every time</p>
+          </div>
+        </div>
+
+        
+        <div class="feature-pill-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 2c-4 0-8 .5-8 4v8c0 3.5 3 6 8 6s8-2.5 8-6V6c0-3.5-4-4-8-4zm6 11.5c-.8.8-2.1 1.5-4 1.8V17h-4v-1.7c-1.9-.3-3.2-1-4-1.8V8.3c1.7 1.1 4.5 1.7 6 1.7s4.3-.6 6-1.7v5.2z"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h4>Homemade Treats</h4>
+            <p>Baked fresh daily at dawn</p>
+          </div>
+        </div>
+
+        
+        <div class="feature-pill-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h4>Cozy Ambience</h4>
+            <p>Perfect for work, books & friends</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="special-picks-section" id="special-picks">
+    <div class="container">
+      <div class="section-header text-center">
+        <!-- <span class="section-script">Made with passion &hearts;</span> -->
+        <h2 class="section-title">Our Special Picks</h2>
+        
+      </div>
+
+      <div class="picks-grid">
+        <!-- Pick 1: Caffè Latte -->
+        <div class="menu-card featured-card">
+          <div class="card-img-holder">
+            <img src="images_manu/special-latte.jpg" alt="Caffè Latte">
+            <!-- <span class="badge-pick">BESTSELLER</span> -->
+          </div>
+          <div class="card-details">
+            <h3 class="card-title">Caffe Latte</h3>
+            <p class="card-desc">Rich double espresso balanced with steamed whole milk and a silky microfoam rosette.</p>
+            <div class="card-footer-action">
+              <div class="card-price">₹180</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Caffè Latte', 180)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card featured-card">
+          <div class="card-img-holder">
+            <img src="images_manu/special-croissant.jpg" alt="Chocolate Croissant">
+            <!-- <span class="badge-pick">FRESH BAKE</span> -->
+          </div>
+          <div class="card-details">
+            <h3 class="card-title">Chocolate Croissant</h3>
+            <p class="card-desc">Flaky, golden all-butter French puff pastry wrapped around melted dark Belgian chocolate.</p>
+            <div class="card-footer-action">
+              <div class="card-price">₹140</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Chocolate Croissant', 140)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card featured-card">
+          <div class="card-img-holder">
+            <img src="images_manu/special-iced-coffee.jpg" alt="Iced Coffee">
+            <!-- <span class="badge-pick">POPULAR</span> -->
+          </div>
+          <div class="card-details">
+            <h3 class="card-title">Iced Coffee</h3>
+            <p class="card-desc">Smooth slow-steeped espresso poured over crystal ice with fresh cream and subtle cane sugar.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;160</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Iced Coffee', 160)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card featured-card">
+          <div class="card-img-holder">
+            <img src="images_manu/special-cheesecake.jpg" alt="Blueberry Cheesecake">
+            <!-- <span class="badge-pick">CHEF SPECIAL</span> -->
+          </div>
+          <div class="card-details">
+            <h3 class="card-title">Blueberry Cheesecake</h3>
+            <p class="card-desc">Classic velvety New York cream cheesecake layered over buttery graham crust with wild berries.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;220</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Blueberry Cheesecake', 220)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="full-menu-section" id="full-menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <!-- <span class="section-script">Explore Our Variety</span> -->
+        <h2 class="fullmenu-section-title">Discover Our Full Menu</h2>
+        <!-- <p class="section-subtitle">
+          From sunrise espresso shots to savory grilled bites, each dish is made to order with authentic ingredients.
+        </p> -->
+
+        <!-- Category Navigation Tabs -->
+        <!-- <div class="menu-tabs">
+          <button class="tab-btn active" data-category="all">All Items</button>
+          <button class="tab-btn" data-category="hot-coffee">Hot Coffees</button>
+          <button class="tab-btn" data-category="cold-coffee">Cold Brews &amp; Iced</button>
+          <button class="tab-btn" data-category="bakery">Bakery &amp; Treats</button>
+          <button class="tab-btn" data-category="savory">Sandwiches &amp; Bites</button>
+        </div>
+      </div> -->
+
+      <div class="full-menu-grid">
+        
+        
+        <div class="menu-card" data-category="hot-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-cappuccino.jpg" alt="Velvet Cappuccino">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Velvet Cappuccino</h3>
+              <span class="card-category-tag">Hot Coffee</span>
+            </div>
+            <p class="card-desc">Equal parts rich espresso, steamed whole milk, and dense foam dusted with cocoa powder.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;160</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Velvet Cappuccino', 160)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="hot-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-espresso.jpg" alt="Signature Double Espresso">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Signature Double Espresso</h3>
+              <span class="card-category-tag">Hot Coffee</span>
+            </div>
+            <p class="card-desc">Intense, aromatic double shot pulled under 9-bar pressure with a golden, velvety crema.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;120</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Signature Double Espresso', 120)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="hot-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-caramel-macchiato.jpg" alt="Caramel Macchiato">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Caramel Macchiato</h3>
+              <span class="card-category-tag">Hot Coffee</span>
+            </div>
+            <p class="card-desc">Freshly steamed vanilla milk marked with dark espresso shots and handmade caramel crosshatch.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;190</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Caramel Macchiato', 190)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="hot-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-mocha.jpg" alt="Belgian Mocha Dream">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Belgian Mocha Dream</h3>
+              <span class="card-category-tag">Hot Coffee</span>
+            </div>
+            <p class="card-desc">Rich Belgian dark chocolate melted into bold espresso, steamed milk, and whipped cream crown.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;210</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Belgian Mocha Dream', 210)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="cold-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-coldbrew.jpg" alt="18-Hour Nitro Cold Brew">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">18-Hour Nitro Cold Brew</h3>
+              <span class="card-category-tag">Cold Brew</span>
+            </div>
+            <p class="card-desc">Slow-steeped Arabica coffee infused with food-grade nitrogen for a creamy, stout-like head.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;190</div>
+              <button class="btn btn-order-item" onclick="addToOrder('18-Hour Nitro Cold Brew', 190)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="cold-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-affogato.jpg" alt="Classic Italian Affogato">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Italian Affogato Al Caff&egrave;</h3>
+              <span class="card-category-tag">Cold Specialty</span>
+            </div>
+            <p class="card-desc">A generous scoop of artisan Madagascar vanilla gelato drowned in a piping hot double ristretto.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;170</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Italian Affogato', 170)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="cold-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-matcha.jpg" alt="Iced Ceremonial Matcha">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Iced Ceremonial Matcha</h3>
+              <span class="card-category-tag">Tea &amp; Cold</span>
+            </div>
+            <p class="card-desc">First-harvest Japanese stoneground Uji matcha whisked with iced oat milk and pure agave.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;220</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Iced Ceremonial Matcha', 220)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="cold-coffee">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-berry-cooler.jpg" alt="Strawberry Mint Cooler">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Strawberry Mint Cooler</h3>
+              <span class="card-category-tag">Refresher</span>
+            </div>
+            <p class="card-desc">Sparkling soda infused with muddled fresh strawberries, wild garden mint, and Meyer lemon.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;180</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Strawberry Mint Cooler', 180)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="bakery">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-cinnamon-roll.jpg" alt="Glazed Cinnamon Roll">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Glazed Cinnamon Roll</h3>
+              <span class="card-category-tag">Bakery</span>
+            </div>
+            <p class="card-desc">Soft brioche swirl with Ceylon cinnamon brown sugar butter, smothered in vanilla cream cheese icing.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;150</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Glazed Cinnamon Roll', 150)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="menu-card" data-category="bakery">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-muffin.jpg" alt="Blueberry Crumble Muffin">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Blueberry Crumble Muffin</h3>
+              <span class="card-category-tag">Bakery</span>
+            </div>
+            <p class="card-desc">Fluffy golden muffin bursting with sweet blueberries, crowned with a crunchy cinnamon streusel.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;130</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Blueberry Crumble Muffin', 130)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="bakery">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-brownie.jpg" alt="Fudge Walnut Brownie">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Fudge Walnut Brownie</h3>
+              <span class="card-category-tag">Bakery</span>
+            </div>
+            <p class="card-desc">Dense, fudgy dark cocoa square loaded with toasted California walnuts and a glossy chocolate glaze.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;160</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Fudge Walnut Brownie', 160)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="bakery">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-almond-croissant.jpg" alt="Toasted Almond Croissant">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Toasted Almond Croissant</h3>
+              <span class="card-category-tag">Bakery</span>
+            </div>
+            <p class="card-desc">Twice-baked butter croissant filled with almond frangipane cream, dusted with powdered sugar.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;170</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Toasted Almond Croissant', 170)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="menu-card" data-category="savory">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-avocado-toast.jpg" alt="Sourdough Avocado Toast">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Sourdough Avocado Toast</h3>
+              <span class="card-category-tag">Savory Bites</span>
+            </div>
+            <p class="card-desc">Toasted rustic sourdough with creamy Hass avocado smash, free-range egg, feta cheese, and chili flakes.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;210</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Sourdough Avocado Toast', 210)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-card" data-category="savory">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-pesto-panini.jpg" alt="Smoked Chicken Pesto Panini">
+            <!-- <span class="badge-diet nonveg">CHEF PICK</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Smoked Chicken Pesto Panini</h3>
+              <span class="card-category-tag">Gourmet Panini</span>
+            </div>
+            <p class="card-desc">Tender smoked chicken breast, fresh basil walnut pesto, sundried tomatoes, and melted mozzarella on ciabatta.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;240</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Smoked Chicken Pesto Panini', 240)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="savory">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-bagel.jpg" alt="Herbed Cream Cheese Bagel">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Herbed Cream Cheese Bagel</h3>
+              <span class="card-category-tag">Savory Bites</span>
+            </div>
+            <p class="card-desc">Warm toasted sesame bagel spread with whipped scallion cream cheese, cucumber ribbons, and capers.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;180</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Herbed Cream Cheese Bagel', 180)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="menu-card" data-category="savory">
+          <div class="card-img-holder">
+            <img src="images_manu/cat-quiche.jpg" alt="Spinach & Wild Mushroom Quiche">
+            <!-- <span class="badge-diet veg">VEG</span> -->
+          </div>
+          <div class="card-details">
+            <div class="card-header-meta">
+              <h3 class="card-title">Spinach &amp; Mushroom Quiche</h3>
+              <span class="card-category-tag">Warm Quiche</span>
+            </div>
+            <p class="card-desc">Flaky golden French pastry crust filled with savory egg custard, baby spinach, caramelized onions, and gruyère.</p>
+            <div class="card-footer-action">
+              <div class="card-price">&#8377;190</div>
+              <button class="btn btn-order-item" onclick="addToOrder('Spinach & Mushroom Quiche', 190)">
+                <span>Order Now</span>
+                <span class="btn-plus">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="story-philosophy-section">
+    <div class="container story-philosophy-container">
+      
+      
+      <div class="story-photo-col">
+        <div class="story-photo-card">
+          <img src="images_manu/story-coffee.jpg" alt="Coffee Cup on Roasted Beans" class="story-img">
+          
+        </div>
+      </div>
+
+
+      <div class="story-content-col">
+        <span class="story-tag">OUR PHILOSOPHY</span>
+        <h2 class="story-main-title">More Than Just Coffee</h2>
+        <p class="story-lead">
+          We believe every cup holds a conversation, and every plate shares a story. 
+          From ethical direct-trade beans to oven-warm pastries, our cafe is your comforting home away from home.
+        </p>
+
+        
+        
+        <div class="story-features-list">
+          <!-- Item 1 -->
+          <div class="story-feature-item">
+            <div class="story-feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <div class="story-feature-body">
+              <h4>Freshly Brewed Every Hour</h4>
+              <p>We grind each batch seconds before extraction to preserve delicate aromatics and peak flavor.</p>
+            </div>
+          </div>
+
+          
+          <div class="story-feature-item">
+            <div class="story-feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+              </svg>
+            </div>
+            <div class="story-feature-body">
+              <h4>Locally Sourced Ingredients</h4>
+              <p>Pure farm-fresh dairy, organic stoneground flours, and seasonal produce from trusted local growers.</p>
+            </div>
+          </div>
+
+          
+          <div class="story-feature-item">
+            <div class="story-feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+            </div>
+            <div class="story-feature-body">
+              <h4>A Place For Everyone</h4>
+              <p>Comfortable seats, quiet reading nooks, ultra-fast fiber WiFi, and warm genuine hospitality.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-cta-box">
+          <a href="about.html" class="btn btn-primary">LEARN MORE ABOUT US &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="order-toast" id="orderToast" style="cursor: pointer;">
+    <div class="toast-icon">&#10003;</div>
+    <div class="toast-body">
+      <span class="toast-title" id="toastItemName">Item Added</span>
+      <span class="toast-subtitle">Added to cart! Tap to view cart & checkout &rarr;</span>
+    </div>
+  </div>
+
+  
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        
+        <!-- Column 1: Brand & Contact -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">
+            <span class="footer-logo-title">CAF&Eacute;</span>
+            <span class="footer-logo-subtitle">COFFEE &amp; MORE</span>
+          </div>
+          <p class="footer-about">
+            Crafting the finest artisan coffee and freshly baked pastries daily. Your cozy neighborhood retreat for delicious mornings and memorable moments.
+          </p>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>newtown,kolkata,west bengal</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+91 9732604727</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>support@cafecoffeemore.com</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Our Story</a></li>
+            <li><a href="manu.html">Our Menu</a></li>
+            <li><a href="home.html#gallery">Photo Gallery</a></li>
+            <li><a href="home.html#reviews">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Menu Highlights</h4>
+          <ul class="footer-links">
+            <li><a href="#special-picks">Artisan Caffè Latte</a></li>
+            <li><a href="#special-picks">Chocolate Croissant</a></li>
+            <li><a href="#special-picks">Iced Single Origin</a></li>
+            <li><a href="#special-picks">Blueberry Cheesecake</a></li>
+            <li><a href="#full-menu">18hr Nitro Cold Brew</a></li>
+            <li><a href="#full-menu">Smoked Chicken Panini</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Opening Hours</h4>
+          <ul class="footer-hours-list">
+            <li>
+              <span class="day">Mon – Fri</span>
+              <span class="time">7:00 AM – 9:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Saturday</span>
+              <span class="time">8:00 AM – 10:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Sunday</span>
+              <span class="time">8:00 AM – 9:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Holidays</span>
+              <span class="time">8:00 AM – 8:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =====================================
+       ACCOUNT (LOGIN & REGISTER) MODAL
+  ====================================== -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white;">
+          <h5 class="modal-title" id="accountModalTitle">Welcome to Our Café</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <p class="text-center text-muted">Login or create an account to place your order.</p>
+
+          <ul class="nav nav-pills nav-fill mb-4">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#loginTab" type="button">Login</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#registerTab" type="button">Register</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- LOGIN FORM -->
+            <div class="tab-pane fade show active" id="loginTab">
+              <form id="customerLoginForm">
+                <div class="mb-3">
+                  <label for="customerLoginEmail" class="form-label">Email Address</label>
+                  <input type="email" id="customerLoginEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerLoginPassword" class="form-label">Password</label>
+                  <input type="password" id="customerLoginPassword" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">Login</button>
+              </form>
+              <p class="text-center mt-3">New customer? <a href="#" data-bs-toggle="pill" data-bs-target="#registerTab">Create Account</a></p>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div class="tab-pane fade" id="registerTab">
+              <form id="customerRegisterForm">
+                <div class="mb-3">
+                  <label for="customerRegisterName" class="form-label">Full Name</label>
+                  <input type="text" id="customerRegisterName" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerRegisterEmail" class="form-label">Email Address</label>
+                  <input type="email" id="customerRegisterEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerRegisterPassword" class="form-label">Password</label>
+                  <input type="password" id="customerRegisterPassword" class="form-control" placeholder="Create a password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">Create Account</button>
+              </form>
+              <p class="text-center mt-3">Already registered? <a href="#" data-bs-toggle="pill" data-bs-target="#loginTab">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====================================
+       CART SYSTEM MODAL
+  ====================================== -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius: 16px; overflow: hidden; border: none; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white; padding: 18px 24px;">
+          <h5 class="modal-title d-flex align-items-center gap-2" id="cartModalLabel">
+            <span>🛒</span> Your Order Cart
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4" style="background-color: #fdfaf6;">
+
+          <!-- Empty Cart State -->
+          <div id="cartEmptyState" style="display: none;" class="text-center py-5">
+            <div style="font-size: 3.5rem; margin-bottom: 12px;">☕</div>
+            <h4 style="font-family: 'Playfair Display', serif; color: #2c1e18;">Your Cart is Empty</h4>
+            <p class="text-muted mb-4">You haven't added any items yet. Discover our fresh brews and bakery treats!</p>
+            <a href="manu.html" class="btn btn-order" data-bs-dismiss="modal">Browse Menu</a>
+          </div>
+
+          <!-- Cart Content State -->
+          <div id="cartContentState">
+
+            <!-- Cart Items Table -->
+            <div class="table-responsive mb-3" style="max-height: 260px; overflow-y: auto;">
+              <table class="table align-middle" style="background: transparent;">
+                <thead>
+                  <tr style="border-bottom: 2px solid #ecdcd0; font-size: 0.85rem; color: #78685d; text-transform: uppercase;">
+                    <th>Item</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-end">Subtotal</th>
+                    <th class="text-center" style="width: 40px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="cartItemsTableBody">
+                  <!-- Populated dynamically by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Price Summary -->
+            <div class="p-3 mb-4 rounded" style="background: #f4ece4; border: 1px solid #e5d5c5;">
+              <div class="d-flex justify-content-between mb-1" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Items Subtotal:</span>
+                <strong id="cartSubtotalText">₹0</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Delivery Fee:</span>
+                <span class="text-success fw-bold">FREE</span>
+              </div>
+              <hr style="margin: 8px 0; border-color: #d1bfb1;">
+              <div class="d-flex justify-content-between align-items-center">
+                <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #2c1e18;">Grand Total:</span>
+                <span style="font-size: 1.4rem; font-weight: 800; color: #856a46;" id="cartGrandTotalText">₹0</span>
+              </div>
+            </div>
+
+            <!-- Checkout Section -->
+            <div id="cartCheckoutContainer">
+
+              <!-- When NOT logged in: Prompt to sign in -->
+              <div id="cartGuestPrompt" class="p-4 rounded text-center" style="background: white; border: 1.5px dashed #c4ad9d;">
+                <h5 style="color: #2c1e18; font-family: 'Playfair Display', serif; margin-bottom: 6px;">Sign In to Complete Your Order</h5>
+                <p class="text-muted small mb-3">Please sign in or create an account so we can deliver your order to you.</p>
+                <button type="button" class="btn btn-order" id="cartSignInTrigger">
+                  Sign In / Register to Order
+                </button>
+              </div>
+
+              <!-- When logged in: Delivery details form -->
+              <div id="cartCustomerFormWrapper" style="display: none; background: white; padding: 20px; border-radius: 12px; border: 1px solid #eedecf;">
+                <h6 style="color: #2c1e18; font-weight: 700; margin-bottom: 14px; font-family: 'Playfair Display', serif;">Delivery & Payment Details</h6>
+                <form id="cartCheckoutForm">
+                  <div class="row g-2 mb-2">
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Customer Name</label>
+                      <input type="text" class="form-control form-control-sm" id="cartCustomerName" readonly>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Email Address</label>
+                      <input type="email" class="form-control form-control-sm" id="cartCustomerEmail" readonly>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerPhone" class="form-label small fw-semibold">Phone Number *</label>
+                    <input type="tel" class="form-control form-control-sm" id="cartCustomerPhone" placeholder="Enter 10-digit mobile number" required pattern="[0-9+() -]{10,15}">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerAddress" class="form-label small fw-semibold">Delivery Address *</label>
+                    <textarea class="form-control form-control-sm" id="cartCustomerAddress" rows="2" placeholder="Street name, flat/house number, landmark" required></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="cartPaymentMethod" class="form-label small fw-semibold">Payment Method *</label>
+                    <select class="form-select form-select-sm" id="cartPaymentMethod" required>
+                      <option value="Cash on Delivery">Cash on Delivery (Pay at Doorstep)</option>
+                      <option value="UPI / QR Code">UPI (Google Pay / PhonePe / Paytm)</option>
+                      <option value="Credit / Debit Card">Credit / Debit Card</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-order w-100 py-2 fs-6" id="cartSubmitBtn">
+                    Confirm & Place Order (<span id="cartBtnTotal">₹0</span>)
+                  </button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+

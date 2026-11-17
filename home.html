@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAFÉ - Good Coffee, Great Moments</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+
+  <header class="site-header">
+    <div class="container header-container">
+
+      <div class="site-logo">
+        <a href="home.html">
+          <span class="logo-title">CAFE</span>
+          <span class="logo-subtitle">COFFEE & MORE</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="home.html" class="active">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="manu.html">MENU</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+
+          <li id="myProfileNav" style="display: none;">
+            <a href="userdasbord.html">MY PROFILE</a>
+          </li>
+
+          <li id="adminDashboardNav" style="display: none;">
+            <a href="admine_dasbord.html">ADMIN DASHBOARD</a>
+          </li>
+
+        </ul>
+      </nav>
+
+
+      <div class="header-action" id="authButtons">
+
+        <button class="btn btn-order" type="button" id="signInNavBtn">
+          Sign In
+        </button>
+
+        <button class="btn btn-order" type="button" id="logoutNavBtn" style="display:none;">
+          Logout
+        </button>
+
+        <button class="btn btn-order" type="button" id="onlineOrderBtn">
+          <span>🛒</span> ONLINE ORDER <span class="badge cart-badge bg-white text-dark ms-1" id="cartBadge" style="display:none; font-size: 0.72rem; padding: 2px 7px; border-radius: 12px;">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+
+        <span class="hero-script">Welcome To Our Cafe</span>
+
+        <h1 class="hero-title">
+          Good Coffee,<br>Great Moments
+        </h1>
+
+        <p class="hero-desc">
+          Savor handcrafted coffee, fresh pastries, and cozy vibes.<br>
+          Your perfect daily escape.
+        </p>
+
+        <a href="manu.html" class="btn btn-hero">
+          VIEW OUR MENU
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="why-us-section" id="about">
+    <div class="container text-center">
+
+      <h2 class="section-title">Why Choose Us</h2>
+
+      <div class="why-us-grid">
+
+        <div class="why-card">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#2c1e18" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 19c2 1.4 5 1.8 9 1.8s7-.4 9-1.8"></path>
+              <path d="M5 8.5h12v6c0 3-2 5-6 5s-6-2-6-5V8.5z"></path>
+              <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"></path>
+              <path d="M11 1.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" fill="#2c1e18"></path>
+            </svg>
+          </div>
+
+          <h3 class="why-card-title">Quality Coffee</h3>
+          <p class="why-card-text">
+            We source the finest beans and brew every cup to perfection.
+          </p>
+        </div>
+
+
+        <div class="why-card">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#2c1e18" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="4.2" r="1.6" fill="#2c1e18"></circle>
+              <path d="M12.4 2.8c.8-.9 1.8-1.2 2.8-.8"></path>
+              <path d="M12 6.5l7.5 4.2v6.8l-7.5 3.5-7.5-3.5v-6.8l7.5-4.2z"></path>
+              <path d="M4.5 13.8l7.5 3.5 7.5-3.5"></path>
+              <path d="M4.5 16.8l7.5 3.5 7.5-3.5"></path>
+            </svg>
+          </div>
+
+          <h3 class="why-card-title">Fresh <span class="amp">&</span> Delicious</h3>
+          <p class="why-card-text">
+            From pastries to meals, everything is made fresh daily.
+          </p>
+        </div>
+
+
+        <div class="why-card">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#2c1e18" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 20.5h7l1-5.5h-9l1 5.5z"></path>
+              <line x1="6.8" y1="15" x2="17.2" y2="15"></line>
+              <line x1="12" y1="15" x2="12" y2="5"></line>
+              <path d="M12 10.5c-3.6 0-6.2-2-6.2-5.5 0 3.5 2.6 5.5 6.2 5.5z"></path>
+              <path d="M12 10.5c3.6 0 6.2-2 6.2-5.5 0 3.5-2.6 5.5-6.2 5.5z"></path>
+              <circle cx="12" cy="4.5" r="1.3" fill="#2c1e18"></circle>
+            </svg>
+          </div>
+
+          <h3 class="why-card-title">Cozy Atmosphere</h3>
+          <p class="why-card-text">
+            A warm and welcoming space to relax, work, or catch up.
+          </p>
+        </div>
+
+
+        <div class="why-card">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#2c1e18" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3.2"></circle>
+              <path d="M3 19.5c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+              <path d="M15 5.2a3.2 3.2 0 0 1 1.8 5.6"></path>
+              <path d="M16 13.8c2.4.6 4.3 2.6 4.5 5.7"></path>
+            </svg>
+          </div>
+
+          <h3 class="why-card-title">Friendly Staff</h3>
+          <p class="why-card-text">
+            Our team is here to make your visit extra special.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="craft-story-section" id="story">
+    <div class="container craft-story-container">
+
+      <div class="craft-img-wrapper">
+        <iframe src="https://www.youtube.com/embed/0jIeCAOkgcQ?si=7GC6YCbC5tryc26K"
+          title="Artisan Coffee Roasting and Brewing" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="craft-content">
+
+        <h2 class="craft-title">
+          The Art <span class="amp">&</span> Passion Behind Every Brew
+        </h2>
+
+        <p class="craft-desc">
+          At Cafe, every morning begins with the intoxicating aroma of freshly roasted beans.
+          We source directly from generational family farms across Colombia, Ethiopia, and Guatemala,
+          paying ethical premiums to support regenerative agriculture and deliver unmatched cup complexity.
+        </p>
+
+        <div class="craft-features">
+
+          <div class="craft-feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#765847">
+                <path
+                  d="M12.5 3c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6-.4-1.5-.5-3.1-.3-4.7.4-2.8 1.8-5.2 3.8-7.1 1.3-1.2 2.8-2.2 4.5-2.8-1.6-.6-3.4-1-5.5-1zm3 1.2c-1.5.5-2.9 1.4-4.1 2.5-2 1.9-3.3 4.3-3.7 6.9-.2 1.5-.1 3 .3 4.4 4.1-.3 7.5-3.6 7.7-7.8 0-2.2-.8-4.3-2.2-6z">
+                </path>
+                <path
+                  d="M18.8 8.4c-1.1-1.1-2.4-1.9-3.8-2.4 1.4 1.8 2.1 4.1 2 6.4-.1 3.5-2.2 6.5-5.3 7.8 1.1.5 2.4.8 3.8.8 4.7 0 8.5-3.8 8.5-8.5 0-1.6-.4-3.1-1.2-4.5-1.2.1-2.8.2-4 .4z">
+                </path>
+              </svg>
+            </div>
+
+            <div class="feature-text">
+              <h4>Single-Origin Arabica</h4>
+              <p>
+                Slow roasted in small batches to preserve nuanced flavor notes of dark cocoa and berries.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="craft-feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#765847" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                <path d="M12 2a10 10 0 0 1 10 10"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+
+            <div class="feature-text">
+              <h4>Artisan Daily Baking</h4>
+              <p>
+                Hand-rolled croissants, flaky pastries, and rustic sourdough prepared from scratch at dawn.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="craft-feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#765847" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+
+            <div class="feature-text">
+              <h4>Precision Extraction</h4>
+              <p>
+                Calibrated water temperature and custom grind profiles tailored to each roast variety.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="#menu" class="btn btn-craft">DISCOVER OUR PROCESS</a>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="menu-highlights-section" id="menu">
+    <div class="container text-center">
+
+      <div class="section-badge-icon"></div>
+
+      <h2 class="menu-section-title">Our Menu Highlights</h2>
+
+      <div class="menu-grid">
+
+        <div class="menu-item">
+          <div class="menu-img-box">
+            <img src="images/menu-cappuccino.jpg" alt="Cappuccino">
+          </div>
+          <h3 class="menu-name">Cappuccino</h3>
+          <span class="menu-price">₹180</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-box">
+            <img src="images/menu-cake.jpg" alt="Chocolate Cake">
+          </div>
+          <h3 class="menu-name">Chocolate Cake</h3>
+          <span class="menu-price">₹280</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-box">
+            <img src="images/menu-sandwich.jpg" alt="Chicken Sandwich">
+          </div>
+          <h3 class="menu-name">Chicken Sandwich</h3>
+          <span class="menu-price">₹234</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-box">
+            <img src="images/menu-iced-latte.jpg" alt="Iced Latte">
+          </div>
+          <h3 class="menu-name">Iced Latte</h3>
+          <span class="menu-price">₹130</span>
+        </div>
+
+      </div>
+
+      <div class="menu-action">
+        <a href="manu.html" class="btn btn-menu-all">
+          VIEW FULL MENU
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="visit-section" id="contact">
+    <div class="container visit-container">
+
+      <div class="visit-left">
+        <h2 class="visit-heading">Visit Us Today</h2>
+
+        <p class="visit-text">
+          We'd love to welcome you to our cafe.<br>
+          Come for the coffee, stay for the<br>
+          good vibes!
+        </p>
+
+        <a href="#location" class="btn btn-visit">FIND OUR LOCATION</a>
+      </div>
+
+      <div class="visit-gallery">
+
+        <div class="visit-card">
+          <img src="images/visit-exterior.jpg" alt="Café Entrance">
+        </div>
+
+        <div class="visit-card">
+          <img src="images/visit-barista.jpg" alt="Barista Pouring Milk">
+        </div>
+
+        <div class="visit-card">
+          <img src="images/visit-interior.jpg" alt="Cozy Café Interior">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="testimonials-section" id="reviews">
+    <div class="container text-center">
+
+      <div class="section-badge-icon"></div>
+
+      <h2 class="guest-section-title">What Our Guests Say</h2>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+          </div>
+
+          <p class="review-quote">
+            &ldquo;Hands down the finest cappuccino and butter croissant in town.
+            The serene jazz music, warm sunlight through the windows, and friendly
+            smiles make this my favorite daily ritual.&rdquo;
+          </p>
+
+          <div class="reviewer-meta">
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Sarah Jenkins</h4>
+              <span class="reviewer-role">Writer & Coffee Lover</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+          </div>
+
+          <p class="review-quote">
+            &ldquo;You can genuinely taste the passion in every single cup.
+            The baristas know their craft inside out, and the chocolate fudge cake
+            is simply unforgettable. A true hidden gem!&rdquo;
+          </p>
+
+          <div class="reviewer-meta">
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">David Miller</h4>
+              <span class="reviewer-role">Architect & Regular</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+          </div>
+
+          <p class="review-quote">
+            &ldquo;The cozy atmosphere is unmatched. Whether I'm meeting clients,
+            catching up with friends, or enjoying a quiet cold brew by the patio
+            plants, it always feels like home.&rdquo;
+          </p>
+
+          <div class="reviewer-meta">
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Elena Gomez</h4>
+              <span class="reviewer-role">Creative Director</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="newsletter-section">
+    <div class="container newsletter-container">
+
+      <div class="newsletter-left">
+        <div class="newsletter-badge"></div>
+
+        <div class="newsletter-copy">
+          <h4>Stay in the Loop</h4>
+          <p>
+            Subscribe to get updates on new menu items, special offers, and events.
+          </p>
+        </div>
+      </div>
+
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+
+        <input type="email" placeholder="Your email address" required class="newsletter-field">
+
+        <button type="submit" class="btn btn-subscribe">
+          SUBSCRIBE
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+
+        <div class="footer-col footer-brand-col">
+
+          <div class="footer-logo">
+            <span class="footer-logo-title">CAFE</span>
+            <span class="footer-logo-subtitle">COFFEE & MORE</span>
+          </div>
+
+          <p class="footer-about">
+            Crafting the finest artisan coffee and freshly baked pastries daily.
+            Your cozy neighborhood retreat for delicious mornings and memorable moments.
+          </p>
+
+          <div class="footer-contact-info">
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>newtown,kolkata,west bengal</span>
+            </div>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+91 9732604727</span>
+            </div>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>support@cafecoffeemore.com</span>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Our Story</a></li>
+            <li><a href="manu.html">Our Menu</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+            <li><a href="#story">Our Craft</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Menu Highlights</h4>
+
+          <ul class="footer-links">
+            <li><a href="#menu">Artisan Cappuccino</a></li>
+            <li><a href="#menu">Single Origin Espresso</a></li>
+            <li><a href="#menu">Iced Caramel Latte</a></li>
+            <li><a href="#menu">French Butter Croissants</a></li>
+            <li><a href="#menu">Dark Chocolate Cake</a></li>
+            <li><a href="#menu">Chicken Pesto Panini</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Opening Hours</h4>
+
+          <ul class="footer-hours-list">
+            <li>
+              <span class="day">Mon – Fri</span>
+              <span class="time">7:00 AM – 9:00 PM</span>
+            </li>
+
+            <li>
+              <span class="day">Saturday</span>
+              <span class="time">8:00 AM – 10:00 PM</span>
+            </li>
+
+            <li>
+              <span class="day">Sunday</span>
+              <span class="time">8:00 AM – 9:00 PM</span>
+            </li>
+
+            <li>
+              <span class="day">Holidays</span>
+              <span class="time">8:00 AM – 8:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white;">
+
+          <h5 class="modal-title" id="accountModalTitle">
+            Welcome to Our Café
+          </h5>
+
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+
+          <p class="text-center text-muted">
+            Login or create an account to place your order.
+          </p>
+
+
+          <ul class="nav nav-pills nav-fill mb-4">
+
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#loginTab" type="button">
+                Login
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#registerTab" type="button">
+                Register
+              </button>
+            </li>
+
+          </ul>
+
+
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="loginTab">
+
+              <form id="customerLoginForm">
+
+                <div class="mb-3">
+                  <label for="customerLoginEmail" class="form-label">
+                    Email Address
+                  </label>
+
+                  <input type="email" id="customerLoginEmail" class="form-control" placeholder="Enter your email"
+                    required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customerLoginPassword" class="form-label">
+                    Password
+                  </label>
+
+                  <input type="password" id="customerLoginPassword" class="form-control"
+                    placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">
+                  Login
+                </button>
+
+              </form>
+
+              <p class="text-center mt-3">
+                New customer?
+                <a href="#" data-bs-toggle="pill" data-bs-target="#registerTab">
+                  Create Account
+                </a>
+              </p>
+
+            </div>
+
+
+            
+            <div class="tab-pane fade" id="registerTab">
+
+              <form id="customerRegisterForm">
+
+                <div class="mb-3">
+                  <label for="customerRegisterName" class="form-label">
+                    Full Name
+                  </label>
+
+                  <input type="text" id="customerRegisterName" class="form-control" placeholder="Enter your name"
+                    required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customerRegisterEmail" class="form-label">
+                    Email Address
+                  </label>
+
+                  <input type="email" id="customerRegisterEmail" class="form-control" placeholder="Enter your email"
+                    required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="customerRegisterPassword" class="form-label">
+                    Password
+                  </label>
+
+                  <input type="password" id="customerRegisterPassword" class="form-control"
+                    placeholder="Create a password" minlength="6" required>
+                </div>
+
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">
+                  Create Account
+                </button>
+
+              </form>
+
+              <p class="text-center mt-3">
+                Already registered?
+                <a href="#" data-bs-toggle="pill" data-bs-target="#loginTab">
+                  Login
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius: 16px; overflow: hidden; border: none; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white; padding: 18px 24px;">
+          <h5 class="modal-title d-flex align-items-center gap-2" id="cartModalLabel">
+            <span>🛒</span> Your Order Cart
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4" style="background-color: #fdfaf6;">
+
+          
+          <div id="cartEmptyState" style="display: none;" class="text-center py-5">
+            <div style="font-size: 3.5rem; margin-bottom: 12px;">☕</div>
+            <h4 style="font-family: 'Playfair Display', serif; color: #2c1e18;">Your Cart is Empty</h4>
+            <p class="text-muted mb-4">You haven't added any items yet. Discover our fresh brews and bakery treats!</p>
+            <a href="manu.html" class="btn btn-order" data-bs-dismiss="modal">Browse Menu</a>
+          </div>
+
+          
+          <div id="cartContentState">
+
+            
+            <div class="table-responsive mb-3" style="max-height: 260px; overflow-y: auto;">
+              <table class="table align-middle" style="background: transparent;">
+                <thead>
+                  <tr style="border-bottom: 2px solid #ecdcd0; font-size: 0.85rem; color: #78685d; text-transform: uppercase;">
+                    <th>Item</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-end">Subtotal</th>
+                    <th class="text-center" style="width: 40px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="cartItemsTableBody">
+                 
+                </tbody>
+              </table>
+            </div>
+
+            
+            <div class="p-3 mb-4 rounded" style="background: #f4ece4; border: 1px solid #e5d5c5;">
+              <div class="d-flex justify-content-between mb-1" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Items Subtotal:</span>
+                <strong id="cartSubtotalText">₹0</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Delivery Fee:</span>
+                <span class="text-success fw-bold">FREE</span>
+              </div>
+              <hr style="margin: 8px 0; border-color: #d1bfb1;">
+              <div class="d-flex justify-content-between align-items-center">
+                <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #2c1e18;">Grand Total:</span>
+                <span style="font-size: 1.4rem; font-weight: 800; color: #856a46;" id="cartGrandTotalText">₹0</span>
+              </div>
+            </div>
+
+            
+            <div id="cartCheckoutContainer">
+
+             
+              <div id="cartGuestPrompt" class="p-4 rounded text-center" style="background: white; border: 1.5px dashed #c4ad9d;">
+                <h5 style="color: #2c1e18; font-family: 'Playfair Display', serif; margin-bottom: 6px;">Sign In to Complete Your Order</h5>
+                <p class="text-muted small mb-3">Please sign in or create an account so we can deliver your order to you.</p>
+                <button type="button" class="btn btn-order" id="cartSignInTrigger">
+                  Sign In / Register to Order
+                </button>
+              </div>
+
+              
+              <div id="cartCustomerFormWrapper" style="display: none; background: white; padding: 20px; border-radius: 12px; border: 1px solid #eedecf;">
+                <h6 style="color: #2c1e18; font-weight: 700; margin-bottom: 14px; font-family: 'Playfair Display', serif;">Delivery & Payment Details</h6>
+                <form id="cartCheckoutForm">
+                  <div class="row g-2 mb-2">
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Customer Name</label>
+                      <input type="text" class="form-control form-control-sm" id="cartCustomerName" readonly>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Email Address</label>
+                      <input type="email" class="form-control form-control-sm" id="cartCustomerEmail" readonly>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerPhone" class="form-label small fw-semibold">Phone Number *</label>
+                    <input type="tel" class="form-control form-control-sm" id="cartCustomerPhone" placeholder="Enter 10-digit mobile number" required pattern="[0-9+() -]{10,15}">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerAddress" class="form-label small fw-semibold">Delivery Address *</label>
+                    <textarea class="form-control form-control-sm" id="cartCustomerAddress" rows="2" placeholder="Street name, flat/house number, landmark" required></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="cartPaymentMethod" class="form-label small fw-semibold">Payment Method *</label>
+                    <select class="form-select form-select-sm" id="cartPaymentMethod" required>
+                      <option value="Cash on Delivery">Cash on Delivery (Pay at Doorstep)</option>
+                      <option value="UPI / QR Code">UPI (Google Pay / PhonePe / Paytm)</option>
+                      <option value="Credit / Debit Card">Credit / Debit Card</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-order w-100 py-2 fs-6" id="cartSubmitBtn">
+                    Confirm & Place Order (<span id="cartBtnTotal">₹0</span>)
+                  </button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="order-toast" id="orderToast" style="cursor: pointer;">
+    <div class="toast-icon">&#10003;</div>
+    <div class="toast-body">
+      <span class="toast-title" id="toastItemName">Item Added</span>
+      <span class="toast-subtitle">Added to cart! Tap to view cart & checkout &rarr;</span>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

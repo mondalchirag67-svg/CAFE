@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - CAFÉ</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+
+  
+  <header class="site-header">
+    <div class="container header-container">
+
+      <div class="site-logo">
+        <a href="home.html">
+          <span class="logo-title">CAFE</span>
+          <span class="logo-subtitle">COFFEE & MORE</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
+          <li><a href="manu.html">MENU</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+
+          <li id="myProfileNav" style="display: none;">
+            <a href="userdasbord.html">MY PROFILE</a>
+          </li>
+
+          <li id="adminDashboardNav" style="display: none;">
+            <a href="admine_dasbord.html">ADMIN DASHBOARD</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-action" id="authButtons">
+
+        <button class="btn btn-order" type="button" id="signInNavBtn">
+          Sign In
+        </button>
+
+        <button class="btn btn-order" type="button" id="logoutNavBtn" style="display:none;">
+          Logout
+        </button>
+
+        <button class="btn btn-order" type="button" id="onlineOrderBtn">
+          <span>🛒</span> ONLINE ORDER <span class="badge cart-badge bg-white text-dark ms-1" id="cartBadge" style="display:none; font-size: 0.72rem; padding: 2px 7px; border-radius: 12px;">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <section class="about-hero" id="about-hero">
+    <div class="container about-hero-container">
+      <div class="about-hero-content">
+        <span class="hero-tag">ABOUT US</span>
+        <h1 class="about-hero-title">Brewing Warmth,<br>Creating Moments</h1>
+        <p class="about-hero-subtitle">
+          Dedicated to ethical beans, fresh morning bakes, and the timeless joy of bringing people together.
+        </p>
+        <a href="#who-we-are" class="btn btn-hero">DISCOVER OUR JOURNEY</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="who-we-are-section" id="who-we-are">
+    <div class="container who-we-are-container">
+      <!-- Left: High Quality Photo -->
+      <div class="who-img-box">
+        <img src="images_about/who-we-are.jpg" alt="Our Warm Café Atmosphere">
+      </div>
+
+
+      <div class="who-content">
+        <h2 class="who-title">Who We Are</h2>
+        
+        <p class="who-paragraph">
+          CAFE is dedicated to creating warm, uplifting daily experiences through meticulously 
+          sourced single-origin coffee, handcrafted artisan baking, and genuine neighborhood hospitality. 
+          Our goal is to combine passion, sustainability, and authentic craft to deliver moments that 
+          brighten your everyday routine.
+        </p>
+        
+        <p class="who-paragraph">
+          Whether you crave a velvet smooth flat white at dawn, a peaceful sunlit table to work from, 
+          or an afternoon treat with friends, we welcome you to make our café your second home.
+        </p>
+
+        
+        <div class="who-divider"></div>
+
+        
+        <div class="who-stats">
+          <div class="stat-item">
+            <span class="stat-number">10K<span class="stat-plus">+</span></span>
+            <span class="stat-label">HAPPY GUESTS</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">250<span class="stat-plus">+</span></span>
+            <span class="stat-label">ARTISAN RECIPES</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50<span class="stat-plus">+</span></span>
+            <span class="stat-label">DAILY FRESH BAKES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mission-vision-section">
+    <div class="container mission-vision-container">
+      <!-- Card 1: Our Mission -->
+      <div class="mv-card">
+        <h2 class="mv-heading">Our Mission</h2>
+        <div class="mv-img-box">
+          <img src="images_about/our-mission.jpg" alt="Coffee Sourcing & Roasting Mission">
+        </div>
+        <h3 class="mv-subheading">Crafting Exceptional, Sustainable Brews</h3>
+        <p class="mv-text">
+          Our mission is to elevate daily coffee culture through transparent fair-trade partnerships, 
+          regenerative farming advocacy, and zero-compromise artisan roasting. We aim to make every 
+          sip richer, more conscious, and deeply fulfilling.
+        </p>
+      </div>
+
+      <div class="mv-card">
+        <h2 class="mv-heading">Our Vision</h2>
+        <div class="mv-img-box">
+          <img src="images_about/our-vision.jpg" alt="Community Coffee Vision">
+        </div>
+        <h3 class="mv-subheading">A Connected, Joyful Community</h3>
+        <p class="mv-text">
+          Our vision is to build vibrant neighborhood hubs where modern comfort and time-honored 
+          craft coexist in harmony. We aspire to inspire people to slow down, connect deeply, and 
+          celebrate the simple warmth of shared table moments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="values-section">
+    <div class="container text-center">
+      <span class="values-tag">WHY OUR CAFÉ</span>
+      <h2 class="why-values-title">Why Choose Our Artisan Café</h2>
+      
+
+      <div class="values-grid">
+       
+        <div class="value-item">
+          <div class="value-icon-circle icon-coffee">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#765847">
+              <path d="M12.5 3c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6-.4-1.5-.5-3.1-.3-4.7.4-2.8 1.8-5.2 3.8-7.1 1.3-1.2 2.8-2.2 4.5-2.8-1.6-.6-3.4-1-5.5-1zm3 1.2c-1.5.5-2.9 1.4-4.1 2.5-2 1.9-3.3 4.3-3.7 6.9-.2 1.5-.1 3 .3 4.4 4.1-.3 7.5-3.6 7.7-7.8 0-2.2-.8-4.3-2.2-6z"/>
+              <path d="M18.8 8.4c-1.1-1.1-2.4-1.9-3.8-2.4 1.4 1.8 2.1 4.1 2 6.4-.1 3.5-2.2 6.5-5.3 7.8 1.1.5 2.4.8 3.8.8 4.7 0 8.5-3.8 8.5-8.5 0-1.6-.4-3.1-1.2-4.5-1.2.1-2.8.2-4 .4z"/>
+            </svg>
+          </div>
+          <h4 class="value-name">Ethical Direct Sourcing</h4>
+          <p class="value-desc">We partner directly with sustainable, fair-trade coffee estates across Colombia, Ethiopia, and Guatemala.</p>
+        </div>
+
+        
+        <div class="value-item">
+          <div class="value-icon-circle icon-bake">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#765847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <path d="M12 2a10 10 0 0 1 10 10"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h4 class="value-name">Artisan Daily Baking</h4>
+          <p class="value-desc">Every croissant, tart, and sourdough loaf is hand-kneaded and freshly baked in-house at dawn.</p>
+        </div>
+
+       
+        <div class="value-item">
+          <div class="value-icon-circle icon-quality">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#765847" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h4 class="value-name">Barista Craft & Precision</h4>
+          <p class="value-desc">We calibrate water filtration, temperature, and grind profiles tailored to each roast variety.</p>
+        </div>
+
+        
+        <div class="value-item">
+          <div class="value-icon-circle icon-community">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#765847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h4 class="value-name">Guest First Philosophy</h4>
+          <p class="value-desc">Your comfort is our top priority. We cultivate friendly smiles, cozy nooks, and a truly welcoming space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        
+        
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">
+            <span class="footer-logo-title">CAFE</span>
+            <span class="footer-logo-subtitle">COFFEE & MORE</span>
+          </div>
+          <p class="footer-about">
+            Crafting the finest artisan coffee and freshly baked pastries daily. Your cozy neighborhood retreat for delicious mornings and memorable moments.
+          </p>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>newtown,kolkata,west bengal</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+91 9732604727</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>support@cafecoffeemore.com</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Our Story</a></li>
+            <li><a href="manu.html">Our Menu</a></li>
+            <li><a href="home.html#gallery">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Menu Highlights</h4>
+          <ul class="footer-links">
+            <li><a href="manu.html">Artisan Cappuccino</a></li>
+            <li><a href="manu.html">Single Origin Espresso</a></li>
+            <li><a href="manu.html">Iced Caramel Latte</a></li>
+            <li><a href="manu.html">French Butter Croissants</a></li>
+            <li><a href="manu.html">Dark Chocolate Cake</a></li>
+            <li><a href="manu.html">Chicken Pesto Panini</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Opening Hours</h4>
+          <ul class="footer-hours-list">
+            <li>
+              <span class="day">Mon – Fri</span>
+              <span class="time">7:00 AM – 9:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Saturday</span>
+              <span class="time">8:00 AM – 10:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Sunday</span>
+              <span class="time">8:00 AM – 9:00 PM</span>
+            </li>
+            <li>
+              <span class="day">Holidays</span>
+              <span class="time">8:00 AM – 8:00 PM</span>
+            </li>
+          </ul>
+        
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Order Toast Notification -->
+  <div class="order-toast" id="orderToast" style="cursor: pointer;">
+    <div class="toast-icon">&#10003;</div>
+    <div class="toast-body">
+      <span class="toast-title" id="toastItemName">Item Added</span>
+      <span class="toast-subtitle">Added to cart! Tap to view cart & checkout &rarr;</span>
+    </div>
+  </div>
+
+  <!-- =====================================
+       ACCOUNT (LOGIN & REGISTER) MODAL
+  ====================================== -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white;">
+          <h5 class="modal-title" id="accountModalTitle">Welcome to Our Café</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <p class="text-center text-muted">Login or create an account to place your order.</p>
+
+          <ul class="nav nav-pills nav-fill mb-4">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#loginTab" type="button">Login</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#registerTab" type="button">Register</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- LOGIN FORM -->
+            <div class="tab-pane fade show active" id="loginTab">
+              <form id="customerLoginForm">
+                <div class="mb-3">
+                  <label for="customerLoginEmail" class="form-label">Email Address</label>
+                  <input type="email" id="customerLoginEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerLoginPassword" class="form-label">Password</label>
+                  <input type="password" id="customerLoginPassword" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">Login</button>
+              </form>
+              <p class="text-center mt-3">New customer? <a href="#" data-bs-toggle="pill" data-bs-target="#registerTab">Create Account</a></p>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div class="tab-pane fade" id="registerTab">
+              <form id="customerRegisterForm">
+                <div class="mb-3">
+                  <label for="customerRegisterName" class="form-label">Full Name</label>
+                  <input type="text" id="customerRegisterName" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerRegisterEmail" class="form-label">Email Address</label>
+                  <input type="email" id="customerRegisterEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="customerRegisterPassword" class="form-label">Password</label>
+                  <input type="password" id="customerRegisterPassword" class="form-control" placeholder="Create a password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn w-100" style="background-color:rgb(133,106,70); color:white;">Create Account</button>
+              </form>
+              <p class="text-center mt-3">Already registered? <a href="#" data-bs-toggle="pill" data-bs-target="#loginTab">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====================================
+       CART SYSTEM MODAL
+  ====================================== -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius: 16px; overflow: hidden; border: none; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+
+        <div class="modal-header" style="background-color: rgb(133,106,70); color:white; padding: 18px 24px;">
+          <h5 class="modal-title d-flex align-items-center gap-2" id="cartModalLabel">
+            <span>🛒</span> Your Order Cart
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4" style="background-color: #fdfaf6;">
+
+          <!-- Empty Cart State -->
+          <div id="cartEmptyState" style="display: none;" class="text-center py-5">
+            <div style="font-size: 3.5rem; margin-bottom: 12px;">☕</div>
+            <h4 style="font-family: 'Playfair Display', serif; color: #2c1e18;">Your Cart is Empty</h4>
+            <p class="text-muted mb-4">You haven't added any items yet. Discover our fresh brews and bakery treats!</p>
+            <a href="manu.html" class="btn btn-order" data-bs-dismiss="modal">Browse Menu</a>
+          </div>
+
+          <!-- Cart Content State -->
+          <div id="cartContentState">
+
+            <!-- Cart Items Table -->
+            <div class="table-responsive mb-3" style="max-height: 260px; overflow-y: auto;">
+              <table class="table align-middle" style="background: transparent;">
+                <thead>
+                  <tr style="border-bottom: 2px solid #ecdcd0; font-size: 0.85rem; color: #78685d; text-transform: uppercase;">
+                    <th>Item</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-end">Subtotal</th>
+                    <th class="text-center" style="width: 40px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="cartItemsTableBody">
+                  <!-- Populated dynamically by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Price Summary -->
+            <div class="p-3 mb-4 rounded" style="background: #f4ece4; border: 1px solid #e5d5c5;">
+              <div class="d-flex justify-content-between mb-1" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Items Subtotal:</span>
+                <strong id="cartSubtotalText">₹0</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2" style="font-size: 0.95rem; color: #5a483e;">
+                <span>Delivery Fee:</span>
+                <span class="text-success fw-bold">FREE</span>
+              </div>
+              <hr style="margin: 8px 0; border-color: #d1bfb1;">
+              <div class="d-flex justify-content-between align-items-center">
+                <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #2c1e18;">Grand Total:</span>
+                <span style="font-size: 1.4rem; font-weight: 800; color: #856a46;" id="cartGrandTotalText">₹0</span>
+              </div>
+            </div>
+
+            <!-- Checkout Section -->
+            <div id="cartCheckoutContainer">
+
+              <!-- When NOT logged in: Prompt to sign in -->
+              <div id="cartGuestPrompt" class="p-4 rounded text-center" style="background: white; border: 1.5px dashed #c4ad9d;">
+                <h5 style="color: #2c1e18; font-family: 'Playfair Display', serif; margin-bottom: 6px;">Sign In to Complete Your Order</h5>
+                <p class="text-muted small mb-3">Please sign in or create an account so we can deliver your order to you.</p>
+                <button type="button" class="btn btn-order" id="cartSignInTrigger">
+                  Sign In / Register to Order
+                </button>
+              </div>
+
+              <!-- When logged in: Delivery details form -->
+              <div id="cartCustomerFormWrapper" style="display: none; background: white; padding: 20px; border-radius: 12px; border: 1px solid #eedecf;">
+                <h6 style="color: #2c1e18; font-weight: 700; margin-bottom: 14px; font-family: 'Playfair Display', serif;">Delivery & Payment Details</h6>
+                <form id="cartCheckoutForm">
+                  <div class="row g-2 mb-2">
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Customer Name</label>
+                      <input type="text" class="form-control form-control-sm" id="cartCustomerName" readonly>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label small fw-semibold text-muted">Email Address</label>
+                      <input type="email" class="form-control form-control-sm" id="cartCustomerEmail" readonly>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerPhone" class="form-label small fw-semibold">Phone Number *</label>
+                    <input type="tel" class="form-control form-control-sm" id="cartCustomerPhone" placeholder="Enter 10-digit mobile number" required pattern="[0-9+() -]{10,15}">
+                  </div>
+
+                  <div class="mb-2">
+                    <label for="cartCustomerAddress" class="form-label small fw-semibold">Delivery Address *</label>
+                    <textarea class="form-control form-control-sm" id="cartCustomerAddress" rows="2" placeholder="Street name, flat/house number, landmark" required></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="cartPaymentMethod" class="form-label small fw-semibold">Payment Method *</label>
+                    <select class="form-select form-select-sm" id="cartPaymentMethod" required>
+                      <option value="Cash on Delivery">Cash on Delivery (Pay at Doorstep)</option>
+                      <option value="UPI / QR Code">UPI (Google Pay / PhonePe / Paytm)</option>
+                      <option value="Credit / Debit Card">Credit / Debit Card</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-order w-100 py-2 fs-6" id="cartSubmitBtn">
+                    Confirm & Place Order (<span id="cartBtnTotal">₹0</span>)
+                  </button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
